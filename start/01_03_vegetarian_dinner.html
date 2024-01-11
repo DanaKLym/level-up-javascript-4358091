@@ -34,6 +34,18 @@
       }
     ]
     // Write your code here
+    function vegetarianMenu(menu) {
+      const menuOptionRender = document.querySelector('#menu');
+      const realVeg = menu.filter(vegeterian => vegeterian.isVegetarian === true);
+      realVeg.forEach(element => {
+        let meal = document.createElement("li");
+        meal.textContent = element.name;
+        menuOptionRender.appendChild(meal);
+      });
+      console.log(realVeg);
+    }
+
+    vegetarianMenu(menu);
 
   </script>
 </body>
